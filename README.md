@@ -1,9 +1,11 @@
 # When Pretty Isn’t Useful: Investigating Why Modern Text-to-Image Models Fail as Reliable Training Data Generators
 Source code for "When Pretty Isn’t Useful: Investigating Why Modern Text-to-Image Models Fail as Reliable Training Data Generators" paper (CVPR 2026).  
 <p align="center">
-    🌐 <a href="https://horwitz.ai/probex" target="_blank">Project</a> | 📃 <a href="https://arxiv.org/abs/2602.19946" target="_blank">Paper</a> <br>
+    🌐 <a href="https://bill2462.github.io/When-Pretty-Isn-t-Useful-page/" target="_blank">Project</a> | 📃 <a href="https://arxiv.org/abs/2602.19946" target="_blank">Paper</a> <br>
 </p>
-![](img/poster.png)
+<p align="center">
+    <img src="img/poster.png" alt="When Pretty Isn't Useful poster" width="100%">
+</p>
 
 ___
 
