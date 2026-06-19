@@ -34,17 +34,37 @@ ___
  - object_detection -> Code for training Faster-RCNN model
  - segmentation -> Code for training DeepLabV3 
  - classifier -> Code for training various image classifiers
+ - image_dist -> Code for measuring image distribution coverage (PRDC and Vendi metrics)
 
 See README.md in each subdirectory for details on how to use each model.
 
 ## Environment
 
-The following packages need to be install
+The following packages need to be installed
 ```
 conda create -n pretty python=3.12
 conda activate pretty
-pip3 install torch torchvision diffusers transformers pycocotools
+pip3 install torch torchvision diffusers transformers timm pycocotools \
+    numpy scipy scikit-learn pillow tqdm msgpack openai
 ```
+
+The image distribution metrics in `image_dist` additionally require OpenAI's
+CLIP package:
+```
+pip3 install git+https://github.com/openai/CLIP.git
+```
+
+Package usage by subdirectory:
+
+ - `gen` -> torch, torchvision, diffusers, transformers, pillow, numpy
+ - `labelling` -> torch, torchvision, transformers, openai, pillow, numpy, tqdm
+ - `object_detection` -> torch, torchvision, pycocotools, numpy, pillow
+ - `segmentation` -> torch, torchvision, pycocotools, numpy, pillow
+ - `classifier` -> torch, torchvision, timm, msgpack, numpy, scipy, pillow
+ - `image_dist` -> torch, torchvision, clip, scikit-learn, scipy, numpy, pillow, tqdm
+
+The `openai` package (used by `labelling/openai_captioner.py`) also requires an
+`OPENAI_API_KEY` environment variable to be set.
 
 ## Citation
 If you find this useful for your research, please use the following.
